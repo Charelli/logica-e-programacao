@@ -7,20 +7,33 @@ const { expect } = require('chai');
 describe('Teste da Funcão Somar', () => {
     it('A funcão deve ser capaz de somar dois numeros positivos', () => {
         // coletar resultado da função
-        const resultadoDaSOma = SomarDoisValores(5, 5);
+        const resultadoDaSoma = SomarDoisValores(5, 5);
 
         //compare o resultado com o valor esperado
 
-        expect(resultadoDaSOma).to.equal(10);
+        expect(resultadoDaSoma).to.equal(10);
         
     });
 
 
     it('A funcão deve ser capaz de somar dois numeros positivos e negativos', () => {
-        const resultadoDaSOma = SomarDoisValores(5, -5);
+        const resultadoDaSoma = SomarDoisValores(5, -5);
 
-        expect(resultadoDaSOma).to.equal(0); 
+        expect(resultadoDaSoma).to.equal(0); 
 
 
+    });
+
+    it('Somar dois números zerados', () => {
+
+        const resultadoDaSoma = SomarDoisValores(0, 0);
+
+        expect(resultadoDaSoma).to.equal(0);
+    });
+
+    it('Somar dois números negativos', () => {
+
+        const resultadoDaSoma = SomarDoisValores(-15, -20);
+        expect(resultadoDaSoma).to.equal(-35); 
     });
 });
